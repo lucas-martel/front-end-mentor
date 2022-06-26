@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+.app-container{
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-rows: 7vh 80vh 13vh;
+    grid-template-areas: "logo header header header"
+                         ". main aside ."
+                         ". . . .";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo-container{
+    grid-area: logo;
+    justify-self: end;
+    align-self: end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+    grid-area: header;
+    padding: 1% 2%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main{
+    grid-area: main;
+    align-self: end;
 }
 
-.App-link {
-  color: #61dafb;
+aside{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    grid-area: aside;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img{
+    user-select: none;
+    pointer-events: none;
+}
+
+#image-hero{
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+}
+
+@media screen and (max-width: 1080px) {
+    .app-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 10vh 30vh 55vh 5vh;
+        grid-template-areas: "logo header"
+                             "aside aside"
+                             "main main"
+                             ". .";
+                             row-gap: 5%;
+    }
+
+
+    .logo-container{
+        margin-left: 5%;
+        justify-self: start;
+        align-self: center;
+    }
+
+    header{
+        margin-right: 5%;
+        justify-self: end;
+        align-self: center;
+    } 
+
+    aside{
+        align-items: center;
+    }
+
+    main{
+        justify-self: stretch;
+        align-self: start;
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+    }
+
+    #image-hero{
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
 }

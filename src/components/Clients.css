@@ -1,0 +1,19 @@
+.clients-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img.client{
+    max-width: 40%;
+    max-height: 40%;
+    height: auto;
+    width: auto;
+}
+
+@media screen and (max-width: 1080px) {
+    .clients-container{
+        flex-wrap: wrap;
+    }
+}
