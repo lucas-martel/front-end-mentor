@@ -89,15 +89,15 @@ button.register{
     }
 
     .navbar-container{
+        display: none;
+        width: 62%;
+        align-items: flex-start;
         position: fixed;
         left: 38%;
         top: 0%;
-        width: 62%;
         height: 100%;
-        display: none;
         flex-direction: column;
         background-color: var(--almostwhite);
-        align-items: flex-start;
         padding: 5%;
         overflow-y: scroll;
     }
